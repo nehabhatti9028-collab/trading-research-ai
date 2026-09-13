@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trading Research AI</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="progress-wrapper">
+        <div class="progress-top">
+            <span id="stepLabel">Step 1 of 5</span>
+            <span id="stepName">Ask</span>
+        </div>
+
+        <div class="progress-bar">
+            <div id="progressFill"></div>
+        </div>
+    </div>
+
+
+    <main id="askSection">
+        <p class="tagline">AI Trading Research</p>
+
+        <h1>Find answers.<br>Test ideas.</h1>
+
+        <p>
+            Explore trading questions using a simple research workflow.
+        </p>
+
+        <section class="question-box">
+            <label for="researchQuestion">
+                What do you want to research?
+            </label>
+
+            <textarea
+                id="researchQuestion"
+                placeholder="Does buying NIFTY after a sharp fall work?"
+            ></textarea>
+
+            <p id="message"></p>
+
+            <button id="startButton">
+                Start Research
+            </button>
+        </section>
+    </main>
+
+    <main id="clarifySection" hidden>
+        <h1>Clarify the question</h1>
+
+        <p id="showQuestion"></p>
+
+        <label for="fallPercentage">
+            What is a sharp fall?
+        </label>
+
+        <select id="fallPercentage">
+            <option value="2">2%</option>
+            <option value="3">3%</option>
+            <option value="5">5%</option>
+            <option value="7">7%</option>
+        </select>
+
+        <label for="holdingPeriod">
+            Holding period
+        </label>
+
+        <select id="holdingPeriod">
+            <option value="1">1 trading day</option>
+            <option value="5">5 trading days</option>
+            <option value="10">10 trading days</option>
+            <option value="20">20 trading days</option>
+        </select>
+
+        <label for="testPeriod">
+            Historical test period
+        </label>
+
+        <select id="testPeriod">
+            <option value="3">3 years</option>
+            <option value="5">5 years</option>
+            <option value="10">10 years</option>
+        </select>
+
+        <button id="defineButton">
+            Define Research
+        </button>
+    </main>
+
+    <main id="defineSection" hidden>
+        <h1>Research definition</h1>
+
+        <div class="result-row">
+            <span>Sharp fall</span>
+            <span id="resultFall"></span>
+        </div>
+
+        <div class="result-row">
+            <span>Holding period</span>
+            <span id="resultHolding"></span>
+        </div>
+
+        <div class="result-row">
+            <span>Test period</span>
+            <span id="resultPeriod"></span>
+        </div>
+
+        <button id="testButton">
+            Run Test
+        </button>
+    </main>
+
+    <main id="testSection" hidden>
+        <h1>Test results</h1>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <small>Total Trades</small>
+                <strong id="totalTrades">10</strong>
+            </div>
+
+            <div class="stat-card">
+                <small>Win Rate</small>
+                <strong id="winRate">60%</strong>
+            </div>
+
+            <div class="stat-card">
+                <small>Average Return</small>
+                <strong id="averageReturn">1.20%</strong>
+            </div>
+        </div>
+
+        <div class="result-row">
+            <span>Profitable trades</span>
+            <span id="profitableTrades">6</span>
+        </div>
+
+        <div class="result-row">
+            <span>Losing trades</span>
+            <span id="losingTrades">4</span>
+        </div>
+
+        <button id="learnButton">
+            Learn from Results
+        </button>
+    </main>
+
+    <main id="learnSection" hidden>
+        <h1>Research completed</h1>
+
+        <div class="result-row">
+            <span>Data observation</span>
+            <span id="dataObservation"></span>
+        </div>
+
+        <div class="result-row">
+            <span>Conclusion</span>
+            <span id="dataConclusion"></span>
+        </div>
+
+        <div class="result-row">
+            <span>Next investigation</span>
+            <span id="nextInvestigation"></span>
+        </div>
+
+        <div class="success-box">
+            ✓ Research completed using illustrative sample data.
+        </div>
+
+        <button id="restartButton">
+            Restart Research
+        </button>
+    </main>
+
+</body>
+</html>
